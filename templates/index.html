@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <center>
+        <a class="button1" href="#">Project H.A.L.E - DOCTOR ON CALL</a>
+        <div class="johnny">
+            <form>
+                <label for="username" style="font-size: 20px;">Patient Name: </label>
+                <input type="text" style="font-size: 20px;" s name=”username” id="username">
+                <button id="join_leave" style="font-size: 20px;">Join Call</button><br><br>
+                <button id="share_screen" style="font-size: 15px;" disabled>Share Screen</button><br><br>
+                <button id="toggle_chat" style="font-size: 15px;" disabled>Toggle Chat</button>
+            </form>
+        </div>
+        <p id="count">Disconnected.</p>
+        <div id="root">
+            <div id="container" class="container">
+                <div id="local" class="participant">
+                    <div></div>
+                    <div class="label">Me</div>
+                </div>
+                <!-- more participants will be added dynamically here -->
+            </div>
+            <div id="chat">
+                <div id="chat-scroll">
+                    <div id="chat-content">
+                        <!-- chat content will be added dynamically here -->
+                    </div>
+                </div>
+                <input id="chat-input" type="text">
+            </div>
+        </div>
+    </center>
+    <script src="https://media.twiliocdn.com/sdk/js/video/releases/2.3.0/twilio-video.min.js"></script>
+    <script src="https://media.twiliocdn.com/sdk/js/conversations/releases/1.0.0/twilio-conversations.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>

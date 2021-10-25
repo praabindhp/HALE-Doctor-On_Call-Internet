@@ -1,0 +1,7 @@
+set FLASK_ENV=development
+
+flask run
+
+---
+
+ngrok http 5000
